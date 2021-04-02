@@ -10,6 +10,6 @@ export const Home = () => (
             <div>Visit Us at the Nashville North Location</div>
             <div>500 Puppy Way</div>
         </address>
-        <PropsAndState yourName={"Brenda"} />
+        <PropsAndState yourName={"Jackson"} yourPet={"Moose"} />
     </>
 )
