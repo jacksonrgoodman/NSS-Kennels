@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 //import the components we will need
-import { LocationCard } from './LocationCard';
-import { getAllLocations, getLocationById } from '../../modules/LocationManager';
+import { LocationCard } from './LocationCard'
+import { getAllLocations, getLocationById } from '../../modules/LocationManager'
 
 export const LocationList = () => {
   // The initial state is an empty array

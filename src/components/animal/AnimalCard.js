@@ -1,9 +1,20 @@
-import React from "react"
-import "./Animal.css"
+import React from 'react';
+import "./Animal.css";
 
-export const AnimalCard = ({animal}) => (
-    <section className="animal">
-        <h3 className="animal__name">{animal.name}</h3>
-        <div className="animal__breed">Breed: {animal.breed}</div>
-    </section>
-)
+export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
+  return (
+    <div className="card">
+      <div className="card-content">
+        <picture>
+          <img src={require('./dog.jpg')} alt="My Dog" />
+        </picture>
+        <h3>Name: <span className="card-petname">
+          {animal.name}
+        </span></h3>
+        <h5>Phone: {animal.customer.phone}</h5>
+        <p>Breed: {animal.breed}</p>
+        <button type="button" onClick={() => handleDeleteAnimal(animal.id)}>Discharge</button>
+      </div>
+    </div>
+  );
+}
