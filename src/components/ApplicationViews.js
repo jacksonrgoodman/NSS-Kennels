@@ -1,6 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
+// import { AnimalCard } from "./animal/AnimalCard"
 import { AnimalList } from "./animal/AnimalList"
 import { EmployeeCard } from "./employee/EmployeeCard"
 import { LocationCard } from "./location/LocationCard"
@@ -18,6 +19,7 @@ export const ApplicationViews = () => {
             <Route path="/animals">
                 <h2>Animals</h2>
                 <section>
+                    {/* <AnimalCard /> */}
                     <AnimalList />
                 </section>
             </Route>
