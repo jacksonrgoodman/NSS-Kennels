@@ -3,6 +3,9 @@ import { Route } from "react-router-dom"
 import { Home } from "./Home"
 // import { AnimalCard } from "./animal/AnimalCard"
 import { AnimalList } from "./animal/AnimalList"
+import { EmployeeList } from "./employee/EmployeeList"
+import { LocationList } from "./location/LocationList"
+import { CustomerList } from "./customer/CustomerList"
 import { EmployeeCard } from "./employee/EmployeeCard"
 import { LocationCard } from "./location/LocationCard"
 import { CustomerCard } from "./customer/CustomerCard"
@@ -19,29 +22,32 @@ export const ApplicationViews = () => {
             <Route path="/animals">
                 <h2>Animals</h2>
                 <section>
-                    {/* <AnimalCard /> */}
                     <AnimalList />
+                    {/* <AnimalCard /> */}
                 </section>
             </Route>
 
             <Route path="/employees">
                 <h2>Employees</h2>
                 <section>
-                    <EmployeeCard />
+                    <EmployeeList />
+                    {/* <EmployeeCard /> */}
                 </section>
             </Route>
 
             <Route path="/locations">
                 <h2>Locations</h2>
                 <section>
-                    <LocationCard />
+                    <LocationList />
+                    {/* <LocationCard /> */}
                 </section>
             </Route>
 
             <Route path="/customers">
                 <h2>Customers</h2>
                 <section>
-                    <CustomerCard />
+                    <CustomerList />
+                    {/* <CustomerCard /> */}
                 </section>
             </Route>
         </>

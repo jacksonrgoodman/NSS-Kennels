@@ -33,21 +33,25 @@
         {
             "id": 1,
             "name": "Hannah Hall",
+            "phone": "987-6543",
             "address": "7002 Chestnut Ct"
         },
         {
             "id": 2,
             "name": "Billy Bob",
+            "phone": "654-9871",
             "address": "500 Christmas St"
         },
         {
             "id": 3,
             "name": "Steven Smalls",
+            "phone": "456-1237",
             "address": "1100 Main St"
         },
         {
             "id": 4,
             "name": "Amy Adams",
+            "phone": "123-4567",
             "address": "1000 Broadway"
         }
     ],

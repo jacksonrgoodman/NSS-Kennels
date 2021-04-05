@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { PropsAndState } from './PropsAndState'
 
 export const Home = () => (

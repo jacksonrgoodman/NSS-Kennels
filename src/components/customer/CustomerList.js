@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 //import the components we will need
-import { CustomerCard } from './CustomerCard';
-import { getAllCustomers, getCustomerById } from '../../modules/CustomerManager';
+import { CustomerCard } from './CustomerCard'
+import { getAllCustomers, getCustomerById } from '../../modules/CustomerManager'
 
 export const CustomerList = () => {
   // The initial state is an empty array
