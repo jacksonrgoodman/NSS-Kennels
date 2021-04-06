@@ -1,87 +1,91 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 1,
-            "locationId": 1
-        },
-        {
-            "id": 2,
-            "name": "Craig",
-            "breed": "Pug",
-            "customerId": 2,
-            "locationId": 1
-        },
-        {
-            "id": 3,
-            "name": "Abraham",
-            "breed": "Akita",
-            "customerId": 2,
-            "locationId": 1
-        },
-        {
-            "id": 4,
-            "name": "Benny",
-            "breed": "Labrador Retreiver",
-            "customerId": 3,
-            "locationId": 2
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "phone": "987-6543",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Billy Bob",
-            "phone": "654-9871",
-            "address": "500 Christmas St"
-        },
-        {
-            "id": 3,
-            "name": "Steven Smalls",
-            "phone": "456-1237",
-            "address": "1100 Main St"
-        },
-        {
-            "id": 4,
-            "name": "Amy Adams",
-            "phone": "123-4567",
-            "address": "1000 Broadway"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Emma Beaton",
-            "locationId": 1
-        },
-        {
-            "id": 2,
-            "name": "Cornell Williams",
-            "locationId": 1
-        },
-        {
-            "id": 3,
-            "name": "Cathy Craig",
-            "locationId": 2
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville Kennels North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville Kennels South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 1,
+      "locationId": 1,
+      "employeeId":1
+    },
+    {
+      "id": 2,
+      "name": "Craig",
+      "breed": "Pug",
+      "customerId": 2,
+      "locationId": 1,
+      "employeeId":2
+    },
+    {
+      "id": 3,
+      "name": "Abraham",
+      "breed": "Akita",
+      "customerId": 2,
+      "locationId": 1,
+      "employeeId":1
+    },
+    {
+      "id": 4,
+      "name": "Benny",
+      "breed": "Labrador Retreiver",
+      "customerId": 3,
+      "locationId": 2,
+      "employeeId":3
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hannah Hall",
+      "phone": "987-6543",
+      "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 2,
+      "name": "Billy Bob",
+      "phone": "654-9871",
+      "address": "500 Christmas St"
+    },
+    {
+      "id": 3,
+      "name": "Steven Smalls",
+      "phone": "456-1237",
+      "address": "1100 Main St"
+    },
+    {
+      "id": 4,
+      "name":"Amy Adams",
+      "phone":"456-9873",
+      "address":"163 Julia Av"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Emma Beaton",
+      "locationId": 1
+    },
+    {
+      "id": 2,
+      "name": "Cornell Williams",
+      "locationId": 1
+    },
+    {
+      "id": 3,
+      "name": "Cathy Craig",
+      "locationId": 2
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville Kennels North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville Kennels South",
+      "address": "209 Emory Drive"
+    }
+  ]
 }
