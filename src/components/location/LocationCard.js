@@ -8,7 +8,7 @@ import "./Location.css"
 //     </section>
 // )
 
-export const LocationCard = ({ location }) => {
+export const LocationCard = ({ location, handleDeleteLocation }) => {
     return (
       <div className="card">
         <div className="card-content">
@@ -19,6 +19,7 @@ export const LocationCard = ({ location }) => {
             {location.name}
           </span></h3>
           <p>Address: {location.address}</p>
+          <button type="button" onClick={() => handleDeleteLocation(location.id)}>Delete</button>
         </div>
       </div>
     );

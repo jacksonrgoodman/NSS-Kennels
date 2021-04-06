@@ -7,7 +7,7 @@ export const getAnimalById = (id) => {
 }
 
 export const getAllAnimals = () => {
-  return fetch(`${remoteURL}/animals/?_expand=location&_expand=customer`)
+  return fetch(`${remoteURL}/animals/?_expand=location&_expand=customer&_expand=employee`)
   .then(result => result.json())
 }
 
