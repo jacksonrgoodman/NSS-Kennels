@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 //import the components we will need
 import { AnimalCard } from './AnimalCard'
+import { useHistory } from "react-router-dom"
 import { getAllAnimals, deleteAnimal, getAnimalById } from '../../modules/AnimalManager'
 
 export const AnimalList = () => {
   // The initial state is an empty array
   const [animals, setAnimals] = useState([]);
+
+  const history = useHistory();
 
   const getAnimals = () => {
     // After the data comes back from the API, we
@@ -28,12 +31,24 @@ export const AnimalList = () => {
 
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
   return (
-    <div className="container-cards">
-      {animals.map(animal =>
-        <AnimalCard
-          key={animal.id}
-          animal={animal}
-          handleDeleteAnimal={handleDeleteAnimal} />)}
-    </div>
+    <>
+      {/* add this button above your display of animal cards */}
+      <section className="section-content">
+        <button type="button"
+            className="btn"
+            onClick={() => {history.push("/animals/create")}}>
+            Admit Animal
+        </button>
+      </section>
+      <div className="container-cards">
+        {animals.map(animal =>
+          <AnimalCard
+            key={animal.id}
+            animal={animal}
+            handleDeleteAnimal={handleDeleteAnimal} 
+          />)
+        }
+      </div>
+    </>
   );
 };
