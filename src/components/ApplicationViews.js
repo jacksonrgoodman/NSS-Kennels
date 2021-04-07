@@ -1,9 +1,9 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-// import { AnimalCard } from "./animal/AnimalCard"
 import { AnimalList } from "./animal/AnimalList"
 import { AnimalDetail } from "./animal/AnimalDetail";
+import { AnimalForm } from './animal/AnimalForm'
 import { EmployeeList } from "./employee/EmployeeList"
 import { LocationList } from "./location/LocationList"
 import { CustomerList } from "./customer/CustomerList"
@@ -24,6 +24,10 @@ export const ApplicationViews = () => {
 
             <Route path="/animals/:animalId(\d+)">
                 <AnimalDetail />
+            </Route>
+
+            <Route path="/animals/create">
+                <AnimalForm />
             </Route>
 
             {/*
