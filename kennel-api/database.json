@@ -33,11 +33,11 @@
       "employeeId": 3
     },
     {
-      "name": "bread",
-      "breed": "bread",
+      "name": "Moose",
+      "breed": "Yorkie",
       "locationId": 2,
-      "customerId": 2,
-      "employeeId": 2,
+      "customerId": 5,
+      "employeeId": 3,
       "id": 5
     }
   ],
@@ -46,25 +46,31 @@
       "id": 1,
       "name": "Hannah Hall",
       "phone": "987-6543",
-      "address": "7002 Chestnut Ct"
+      "email": "h@h.com"
     },
     {
       "id": 2,
       "name": "Billy Bob",
       "phone": "654-9871",
-      "address": "500 Christmas St"
+      "email": "b@b.com"
     },
     {
       "id": 3,
       "name": "Steven Smalls",
       "phone": "456-1237",
-      "address": "1100 Main St"
+      "email": "s@s.com"
     },
     {
       "id": 4,
       "name": "Amy Adams",
       "phone": "456-9873",
-      "address": "1000 Metropolis Blvd"
+      "email": "a@a.com"
+    },
+    {
+      "email": "jacksonrgoodman@gmail.com",
+      "phone": "838-1963",
+      "name": "Jackson Goodman",
+      "id": 5
     }
   ],
   "employees": [

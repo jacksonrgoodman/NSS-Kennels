@@ -1,15 +1,21 @@
-import React from "react"
-import { Route } from "react-router-dom"
+import React, { useState } from "react"
+import { Route, Redirect } from "react-router-dom"
 import { Home } from "./Home"
+import { Register } from "../components/auth/Register"
+import { Login } from "../components/auth/Login"
 import { AnimalList } from "./animal/AnimalList"
 import { AnimalDetail } from "./animal/AnimalDetail";
 import { AnimalForm } from './animal/AnimalForm'
+import { AnimalEditForm } from './animal/AnimalEditForm'
 import { EmployeeList } from "./employee/EmployeeList"
+import { EmployeeForm } from './employee/EmployeeForm'
+import { EmployeeEditForm } from './employee/EmployeeEditForm'
 import { LocationList } from "./location/LocationList"
 import { CustomerList } from "./customer/CustomerList"
 
 
-export const ApplicationViews = () => {
+export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
+   
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
@@ -17,17 +23,29 @@ export const ApplicationViews = () => {
                 <Home />
             </Route>
 
-            {/* Make sure you add the `exact` attribute here */}
-            <Route exact path="/animals">
-                <AnimalList />
+            <Route path="/login">
+                <Login setAuthUser={setAuthUser}/>
             </Route>
 
-            <Route path="/animals/:animalId(\d+)">
+            <Route path="/register">
+                <Register setAuthUser={setAuthUser}/>
+            </Route>
+
+            {/* Make sure you add the `exact` attribute here */}
+            <Route exact path="/animals">
+                {isAuthenticated ? <AnimalList /> : <Redirect to="/login" />}
+            </Route>
+
+            <Route exact path="/animals/:animalId(\d+)">
                 <AnimalDetail />
             </Route>
 
             <Route path="/animals/create">
                 <AnimalForm />
+            </Route>
+
+            <Route path="/animals/:animalId(\d+)/edit">
+                <AnimalEditForm />
             </Route>
 
             {/*
@@ -43,15 +61,18 @@ export const ApplicationViews = () => {
                 <h2>Employees</h2>
                 <section>
                     <EmployeeList />
-                    {/* <EmployeeCard /> */}
                 </section>
             </Route>
+
+            <Route path="/employees/create">
+                <EmployeeForm />
+            </Route>
+
 
             <Route exact path="/locations">
                 <h2>Locations</h2>
                 <section>
                     <LocationList />
-                    {/* <LocationCard /> */}
                 </section>
             </Route>
 
@@ -59,9 +80,13 @@ export const ApplicationViews = () => {
                 <h2>Customers</h2>
                 <section>
                     <CustomerList />
-                    {/* <CustomerCard /> */}
                 </section>
             </Route>
+
+            <Route path="/employees/:employeeId(\d+)/edit">
+                <EmployeeEditForm />
+            </Route>
+
         </>
     )
 }

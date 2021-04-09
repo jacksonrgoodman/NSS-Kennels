@@ -16,7 +16,7 @@ export const CustomerCard = ({ customer, handleDeleteCustomer }) => {
             {customer.name}
           </span></h3>
           <p>Phone: {customer.phone}</p>
-          <p>Address: {customer.address}</p>
+          <p>Email: {customer.email}</p>
           <button type="button" onClick={() => handleDeleteCustomer(customer.id)}>Delete</button>
         </div>
       </div>
