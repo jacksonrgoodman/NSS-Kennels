@@ -16,6 +16,9 @@ export const AnimalCard = ({ animal }) => {
         </span></h3>
         <h5>Currently with: {animal.employee.name}</h5>
         <h5>Phone: {animal.customer.phone}</h5>
+        <Link to={`/animals/${animal.id}/edit`}>
+          <button type="button">Edit</button>
+        </Link>
         <Link to={`/animals/${animal.id}`}>
           <button>Details</button>
         </Link>

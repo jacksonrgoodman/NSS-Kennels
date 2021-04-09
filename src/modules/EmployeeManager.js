@@ -11,6 +11,26 @@ export const getAllEmployees = () => {
   .then(result => result.json())
 }
 
+export const addEmployee = (newEmployee) => {
+  return fetch(`${remoteURL}/employees`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newEmployee)
+  }).then(response => response.json())
+}
+
+export const updateEmployee = (editedEmployee) =>{
+  return fetch(`${remoteURL}/employees/${editedEmployee.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedEmployee)
+  }).then(data => data.json());
+}
+
 export const deleteEmployee = (id) => {
   return fetch(`${remoteURL}/employees/${id}`, {
     method: "DELETE"
