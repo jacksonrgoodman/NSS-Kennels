@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react"
 import {updateEmployee, getEmployeeById } from "../../modules/EmployeeManager"
 import { useHistory, useParams } from "react-router-dom"
 import "./EmployeeForm.css"
-import { getLocationById } from "../../modules/LocationManager"
+import { getAllLocations } from "../../modules/LocationManager"
 
 export const EmployeeEditForm = () => {
   const [employee, setEmployee] = useState({ name: "" });
+  const [locations, setLocations] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const {employeeId} = useParams();
+  const {locationId} = useParams();
   const history = useHistory();
 
   const handleFieldChange = evt => {
@@ -40,7 +42,14 @@ export const EmployeeEditForm = () => {
         setIsLoading(false);
       });
   }, []);
-  {debugger}
+  useEffect(() => {//!LOCATIONS
+    getAllLocations()
+      .then(locationsFromAPI=> {
+        setLocations(locationsFromAPI);
+        setIsLoading(false);
+      });
+  }, []);
+  // debugger
   return (
     <>
       <form>
@@ -60,10 +69,15 @@ export const EmployeeEditForm = () => {
               required
               className="form-control"
               onChange={handleFieldChange}
-              id="location"
+              value={employee.locationId}
+              id="locationId"
             >
-              <option value={1}>Nashville Kennels North</option>
-              <option value={2}>Nashville Kennels South</option>
+              {locations.map(l =>
+                <option 
+                key={l.id}
+                value={l.id}>{l.name}
+                </option>
+              )}
             </select>
             <label htmlFor="location">Location</label>
           </div>

@@ -39,6 +39,14 @@
       "customerId": 5,
       "employeeId": 3,
       "id": 5
+    },
+    {
+      "name": "Simon",
+      "breed": "Schnauzer",
+      "locationId": 2,
+      "customerId": 4,
+      "employeeId": 3,
+      "id": 6
     }
   ],
   "customers": [
@@ -77,7 +85,7 @@
     {
       "id": 1,
       "name": "Emma Beaton",
-      "locationId": 1
+      "locationId": "1"
     },
     {
       "id": 2,
